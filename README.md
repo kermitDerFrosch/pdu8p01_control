@@ -2,8 +2,8 @@
 Control Outlets of Logilink PDU8P01 and Intellinet 163682
 
 ### dependencies
-- curl
-- rapidxml
+- curl (debian package: libcurl-openssl-dev)
+- rapidxml (get automaticaly on make)
 
 ### Usage 
 ```

@@ -73,19 +73,6 @@ string getHttpResponse(string strData) {
     return response.str();
 }
 
-string intToBinaryString(unsigned long n) {
-    char bArray[ (sizeof ( unsigned long) * 8) + 1 ];
-    unsigned index = sizeof ( unsigned long) * 8;
-    char temp = 0;
-    bArray[ index ] = '\0';
-    do {
-        temp = (n & 1); // Finding 0 or 1 in LSB
-        temp = temp + '0';
-        bArray[ --index ] = temp;
-    } while (n >>= 1);
-    return string(bArray + index);
-}
-
 char *getNodeValue(xml_node<char> *node) {
     if (node) {
         return node->value();
