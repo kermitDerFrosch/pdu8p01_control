@@ -4,6 +4,11 @@ HOST=192.168.0.100
 USER=admin
 PASS=admin
 
+if ! which wget 2>/dev/null >&2;then
+    echo "cannot find \"wget\" binary in PATH"
+    exit 1;
+fi
+
 declare -a OUTLETS
 declare OP
 declare STATUS
